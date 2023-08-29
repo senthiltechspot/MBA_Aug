@@ -17,6 +17,7 @@ mongoose.connect(dbConfigs.DB_URL)
 app.use(bodyParser.json());
 
 require("./src/routes/movie.route")(app);
+require("./src/routes/theatre.routes")(app);
 
 
 app.listen(serverConfigs.PORT, ()=>{
