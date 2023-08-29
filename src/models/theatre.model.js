@@ -19,10 +19,11 @@ const theatreSchema = new mongoose.Schema({
         type:Number,
         default:1
     },
-    movies:{
-        type:[mongoose.SchemaTypes.ObjectId],
-        ref:'mba_movie'
-    }
+    movies:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'mba_movie',
+        unique: true 
+    }]
 })
 
 module.exports= mongoose.model("theatre_mba",theatreSchema);
